@@ -1,6 +1,6 @@
 
-%define short_name beamer
-%define	texhash	[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
+%define	short_name	beamer
+%define	texhash		[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 
 Summary:	A LaTeX class for producing beamer presentations
 Summary(pl):	Klasa LaTeXa do tworzenia prezentacji rzutnikowych
@@ -11,7 +11,6 @@ License:	GPL
 Group:		Applications/Publishing/TeX
 Source0:	http://dl.sourceforge.net/latex-beamer/latex-beamer-%{version}.tar.gz
 # Source0-md5:	4f1b96c15eba6304da49fc7814044837
-# Source0-size:	2541647
 Requires:	tetex-latex
 Requires:	tetex-latex-xcolor >= 2.00
 Requires:	tetex-pgf >= 0.63
@@ -29,7 +28,7 @@ Klasa LaTeXa do tworzenia prezentacji rzutnikowych.
 Summary:	Example presentations created using the LaTeX Beamer class
 Summary(pl):	Przyk³adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer
 Group:		Applications/Publishing/TeX
-Requires:       %{name} = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 
 %description examples
 Example presentations created using the LaTeX Beamer class.
