@@ -3,6 +3,7 @@
 %define	texhash	[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 
 Summary:	A LaTeX class for producing beamer presentations
+Summary(pl):	Klasa LaTeXa do tworzenia prezentacji rzutnikowych
 Name:		tetex-latex-beamer
 Version:	2.01
 Release:	1
@@ -18,6 +19,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A LaTeX class for producing beamer presentations.
+
+%description -l pl
+Klasa LaTeXa do tworzenia prezentacji rzutnikowych.
 
 %prep
 %setup -q -n %{short_name}
