@@ -9,7 +9,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Publishing/TeX
 Source0:	http://dl.sourceforge.net/latex-beamer/latex-beamer-%{version}.tar.gz
-# Source0-md5:	0478c4aecd56f3f4dc8bb4e0df0edd95
+# Source0-md5:	3a03c2a92d6d201ff92a1acfbad5db69
 Requires:	tetex-latex
 Requires:	tetex-latex-xcolor >= 1.06
 Requires:	tetex-pgf >= 0.60
