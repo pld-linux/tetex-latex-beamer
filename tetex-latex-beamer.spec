@@ -1,12 +1,15 @@
-
+#
+# TODO:
+# - package emacs and LyX files
+#
 %define	short_name	beamer
 %define	texhash		[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
-
+#
 Summary:	A LaTeX class for producing beamer presentations
 Summary(pl):	Klasa LaTeXa do tworzenia prezentacji rzutnikowych
 Name:		tetex-latex-beamer
 Version:	3.01
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Publishing/TeX
 Source0:	http://dl.sourceforge.net/latex-beamer/latex-beamer-%{version}.tar.gz
@@ -33,7 +36,7 @@ Requires:	%{name} = %{version}-%{release}
 %description examples
 Example presentations created using the LaTeX Beamer class.
 
-%description -l pl examples
+%description examples -l pl
 Przyk³adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer.
 
 %prep
@@ -41,11 +44,11 @@ Przyk³adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/texmf/tex/latex/%{short_name},%{_examplesdir}}
+install -d $RPM_BUILD_ROOT{%{_datadir}/texmf/tex/latex/%{short_name},%{_examplesdir}/%{name}-%{version}}
 
-install */*.{cls,sty} $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
+cp -ar base emulation extensions themes $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 
-cp -ar examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -ar examples/* solutions $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
