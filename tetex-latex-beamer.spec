@@ -8,12 +8,12 @@
 Summary:	A LaTeX class for producing beamer presentations
 Summary(pl):	Klasa LaTeXa do tworzenia prezentacji rzutnikowych
 Name:		tetex-latex-beamer
-Version:	3.01
-Release:	2
+Version:	3.05
+Release:	1
 License:	GPL
 Group:		Applications/Publishing/TeX
 Source0:	http://dl.sourceforge.net/latex-beamer/latex-beamer-%{version}.tar.gz
-# Source0-md5:	4f1b96c15eba6304da49fc7814044837
+# Source0-md5:	0524000157e657a2006f74f67ef7ae28
 Requires:	tetex-latex
 Requires:	tetex-latex-xcolor >= 2.00
 Requires:	tetex-pgf >= 0.63
@@ -40,7 +40,7 @@ Example presentations created using the LaTeX Beamer class.
 Przyk³adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer.
 
 %prep
-%setup -q -n %{short_name}
+%setup -q -n latex-%{short_name}-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
