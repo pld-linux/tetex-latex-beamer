@@ -16,7 +16,7 @@ Source0:	http://dl.sourceforge.net/latex-beamer/latex-beamer-%{version}.tar.gz
 # Source0-md5:	0524000157e657a2006f74f67ef7ae28
 Requires:	tetex-latex
 Requires:	tetex-latex-xcolor >= 2.00
-Requires:	tetex-pgf >= 0.63
+Requires:	tetex-pgf >= 0.95
 Requires(post,postun):	/usr/bin/texhash
 URL:		http://latex-beamer.sf.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
