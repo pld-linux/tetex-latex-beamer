@@ -39,16 +39,35 @@ Example presentations created using the LaTeX Beamer class.
 %description examples -l pl
 Przyk³adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer.
 
+%package lyx
+Summary:	LyX templates for the LaTeX Beamer class
+Summary(pl):	Szablony klasy LateX Beamer dla programu LyX
+Group:          Applications/Publishing/TeX
+Requires:	%{name} = %{version}-%{release}
+Requires:	lyx
+
+%description lyx
+LyX templates for the LaTeX Beamer class.
+
+%description lyx -l pl
+Szablony klasy LateX Beamer dla programu LyX.
+
 %prep
 %setup -q -n latex-%{short_name}-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/texmf/tex/latex/%{short_name},%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT%{_datadir}/lyx/{layouts,templates}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/lyx
 
 cp -ar base emulation extensions themes $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 
 cp -ar examples/* solutions $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+mv $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/solutions/*/*.lyx $RPM_BUILD_ROOT%{_datadir}/lyx/templates
+cp -ar lyx/layouts/beamer.layout $RPM_BUILD_ROOT%{_datadir}/lyx/layouts
+cp -ar lyx/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/lyx
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -67,3 +86,8 @@ rm -rf $RPM_BUILD_ROOT
 %files examples
 %defattr(644,root,root,755)
 %{_examplesdir}/%{name}-%{version}
+
+%files lyx
+%defattr(644,root,root,755)
+%{_datadir}/lyx/layouts/beamer.layout
+%{_datadir}/lyx/templates/*
