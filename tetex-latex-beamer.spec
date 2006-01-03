@@ -52,6 +52,19 @@ LyX templates for the LaTeX Beamer class.
 %description lyx -l pl
 Szablony klasy LateX Beamer dla programu LyX.
 
+%package emacs
+Summary:	Emacs mode for the LaTeX Beamer class.
+Summary(pl):	Emacsowy tryb edycji plików LaTeX z klas± Beamer.
+Group:		Applications/Publishing/TeX
+Requires:	%{name} = %{version}-%{release}
+Requires:	emacs-common
+
+%description emacs
+Emacs mode for the LaTeX Beamer class.
+
+%description examples -l pl
+Emascowy tryb edycji plików ¼ród³owych LaTeXa znaj±cy klasê Beamer.
+
 %prep
 %setup -q -n latex-%{short_name}-%{version}
 
@@ -60,6 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/texmf/tex/latex/%{short_name},%{_examplesdir}/%{name}-%{version}}
 install -d $RPM_BUILD_ROOT%{_datadir}/lyx/{layouts,templates}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/lyx
+install -d $RPM_BUILD_ROOT%{_datadir}/emacs/site-lisp/site-start.d
 
 cp -ar base emulation extensions themes $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 
@@ -68,6 +82,8 @@ cp -ar examples/* solutions $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 mv $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/solutions/*/*.lyx $RPM_BUILD_ROOT%{_datadir}/lyx/templates
 cp -ar lyx/layouts/beamer.layout $RPM_BUILD_ROOT%{_datadir}/lyx/layouts
 cp -ar lyx/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/lyx
+
+cp -ar emacs/beamer.el $RPM_BUILD_ROOT%{_datadir}/emacs/site-lisp/site-start.d
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -91,3 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/lyx/layouts/beamer.layout
 %{_datadir}/lyx/templates/*
+
+%files emacs
+%defattr(644,root,root,755)
+%{_datadir}/emacs/site-lisp/site-start.d/*
