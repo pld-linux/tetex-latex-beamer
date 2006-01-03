@@ -1,7 +1,3 @@
-#
-# TODO:
-# - package emacs and LyX files
-#
 %define	short_name	beamer
 %define	texhash		[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 #
