@@ -10,11 +10,11 @@ License:	GPL
 Group:		Applications/Publishing/TeX
 Source0:	http://dl.sourceforge.net/latex-beamer/latex-beamer-%{version}.tar.gz
 # Source0-md5:	ab7eeb972d75e758117460aabdddb1e6
+URL:		http://latex-beamer.sf.net/
 Requires:	tetex-latex
 Requires:	tetex-latex-xcolor >= 2.00
 Requires:	tetex-pgf >= 0.95
 Requires(post,postun):	/usr/bin/texhash
-URL:		http://latex-beamer.sf.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,8 +49,8 @@ LyX templates for the LaTeX Beamer class.
 Szablony klasy LateX Beamer dla programu LyX.
 
 %package emacs
-Summary:	Emacs mode for the LaTeX Beamer class.
-Summary(pl):	Emacsowy tryb edycji plików LaTeX z klas± Beamer.
+Summary:	Emacs mode for the LaTeX Beamer class
+Summary(pl):	Emacsowy tryb edycji plików LaTeX z klas± Beamer
 Group:		Applications/Publishing/TeX
 Requires:	%{name} = %{version}-%{release}
 Requires:	emacs-common
