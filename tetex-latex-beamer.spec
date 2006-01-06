@@ -59,7 +59,7 @@ Requires:	emacs-common
 Emacs mode for the LaTeX Beamer class.
 
 %description emacs -l pl
-Emascowy tryb edycji plików ¼ród³owych LaTeXa znaj±cy klasê Beamer.
+Emacsowy tryb edycji plików ¼ród³owych LaTeXa znaj±cy klasê Beamer.
 
 %prep
 %setup -q -n latex-%{short_name}-%{version}
