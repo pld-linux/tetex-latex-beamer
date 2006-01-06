@@ -58,7 +58,7 @@ Requires:	emacs-common
 %description emacs
 Emacs mode for the LaTeX Beamer class.
 
-%description examples -l pl
+%description emacs -l pl
 Emascowy tryb edycji plików ¼ród³owych LaTeXa znaj±cy klasê Beamer.
 
 %prep
