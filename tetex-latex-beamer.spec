@@ -38,7 +38,7 @@ Przyk³adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer.
 %package lyx
 Summary:	LyX templates for the LaTeX Beamer class
 Summary(pl):	Szablony klasy LateX Beamer dla programu LyX
-Group:          Applications/Publishing/TeX
+Group:		Applications/Publishing/TeX
 Requires:	%{name} = %{version}-%{release}
 Requires:	lyx
 
