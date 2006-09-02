@@ -71,15 +71,15 @@ install -d $RPM_BUILD_ROOT%{_datadir}/lyx/{layouts,templates}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/lyx
 install -d $RPM_BUILD_ROOT%{_datadir}/emacs/site-lisp/site-start.d
 
-cp -ar base emulation extensions themes $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
+cp -a base emulation extensions themes $RPM_BUILD_ROOT%{_datadir}/texmf/tex/latex/%{short_name}
 
-cp -ar examples/* solutions $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* solutions $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 mv $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/solutions/*/*.lyx $RPM_BUILD_ROOT%{_datadir}/lyx/templates
-cp -ar lyx/layouts/beamer.layout $RPM_BUILD_ROOT%{_datadir}/lyx/layouts
-cp -ar lyx/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/lyx
+cp -a lyx/layouts/beamer.layout $RPM_BUILD_ROOT%{_datadir}/lyx/layouts
+cp -a lyx/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/lyx
 
-cp -ar emacs/beamer.el $RPM_BUILD_ROOT%{_datadir}/emacs/site-lisp/site-start.d
+cp -a emacs/beamer.el $RPM_BUILD_ROOT%{_datadir}/emacs/site-lisp/site-start.d
 
 %clean
 rm -rf $RPM_BUILD_ROOT
