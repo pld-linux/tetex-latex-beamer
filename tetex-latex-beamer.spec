@@ -2,7 +2,7 @@
 %define	texhash		[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 #
 Summary:	A LaTeX class for producing beamer presentations
-Summary(pl.UTF-8):   Klasa LaTeXa do tworzenia prezentacji rzutnikowych
+Summary(pl.UTF-8):	Klasa LaTeXa do tworzenia prezentacji rzutnikowych
 Name:		tetex-latex-beamer
 Version:	3.06
 Release:	1
@@ -25,7 +25,7 @@ Klasa LaTeXa do tworzenia prezentacji rzutnikowych.
 
 %package examples
 Summary:	Example presentations created using the LaTeX Beamer class
-Summary(pl.UTF-8):   Przykładowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer
+Summary(pl.UTF-8):	Przykładowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer
 Group:		Applications/Publishing/TeX
 Requires:	%{name} = %{version}-%{release}
 
@@ -37,7 +37,7 @@ Przykładowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer.
 
 %package lyx
 Summary:	LyX templates for the LaTeX Beamer class
-Summary(pl.UTF-8):   Szablony klasy LateX Beamer dla programu LyX
+Summary(pl.UTF-8):	Szablony klasy LateX Beamer dla programu LyX
 Group:		Applications/Publishing/TeX
 Requires:	%{name} = %{version}-%{release}
 Requires:	lyx
@@ -50,7 +50,7 @@ Szablony klasy LateX Beamer dla programu LyX.
 
 %package emacs
 Summary:	Emacs mode for the LaTeX Beamer class
-Summary(pl.UTF-8):   Emacsowy tryb edycji plików LaTeX z klasą Beamer
+Summary(pl.UTF-8):	Emacsowy tryb edycji plików LaTeX z klasą Beamer
 Group:		Applications/Publishing/TeX
 Requires:	%{name} = %{version}-%{release}
 Requires:	emacs-common
