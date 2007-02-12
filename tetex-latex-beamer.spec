@@ -2,7 +2,7 @@
 %define	texhash		[ ! -x %{_bindir}/texhash ] || %{_bindir}/texhash 1>&2 ;
 #
 Summary:	A LaTeX class for producing beamer presentations
-Summary(pl):	Klasa LaTeXa do tworzenia prezentacji rzutnikowych
+Summary(pl.UTF-8):   Klasa LaTeXa do tworzenia prezentacji rzutnikowych
 Name:		tetex-latex-beamer
 Version:	3.06
 Release:	1
@@ -20,24 +20,24 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A LaTeX class for producing beamer presentations.
 
-%description -l pl
+%description -l pl.UTF-8
 Klasa LaTeXa do tworzenia prezentacji rzutnikowych.
 
 %package examples
 Summary:	Example presentations created using the LaTeX Beamer class
-Summary(pl):	Przyk³adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer
+Summary(pl.UTF-8):   PrzykÅ‚adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer
 Group:		Applications/Publishing/TeX
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
 Example presentations created using the LaTeX Beamer class.
 
-%description examples -l pl
-Przyk³adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer.
+%description examples -l pl.UTF-8
+PrzykÅ‚adowe prezentacje stworzone z wykorzystaniem klasy LaTeX Beamer.
 
 %package lyx
 Summary:	LyX templates for the LaTeX Beamer class
-Summary(pl):	Szablony klasy LateX Beamer dla programu LyX
+Summary(pl.UTF-8):   Szablony klasy LateX Beamer dla programu LyX
 Group:		Applications/Publishing/TeX
 Requires:	%{name} = %{version}-%{release}
 Requires:	lyx
@@ -45,12 +45,12 @@ Requires:	lyx
 %description lyx
 LyX templates for the LaTeX Beamer class.
 
-%description lyx -l pl
+%description lyx -l pl.UTF-8
 Szablony klasy LateX Beamer dla programu LyX.
 
 %package emacs
 Summary:	Emacs mode for the LaTeX Beamer class
-Summary(pl):	Emacsowy tryb edycji plików LaTeX z klas± Beamer
+Summary(pl.UTF-8):   Emacsowy tryb edycji plikÃ³w LaTeX z klasÄ… Beamer
 Group:		Applications/Publishing/TeX
 Requires:	%{name} = %{version}-%{release}
 Requires:	emacs-common
@@ -58,8 +58,8 @@ Requires:	emacs-common
 %description emacs
 Emacs mode for the LaTeX Beamer class.
 
-%description emacs -l pl
-Emacsowy tryb edycji plików ¼ród³owych LaTeXa znaj±cy klasê Beamer.
+%description emacs -l pl.UTF-8
+Emacsowy tryb edycji plikÃ³w ÅºrÃ³dÅ‚owych LaTeXa znajÄ…cy klasÄ™ Beamer.
 
 %prep
 %setup -q -n latex-%{short_name}-%{version}
