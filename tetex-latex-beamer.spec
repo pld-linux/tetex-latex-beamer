@@ -15,6 +15,7 @@ Requires(post,postun):	/usr/bin/texhash
 Requires:	tetex-latex
 Requires:	tetex-latex-xcolor >= 2.00
 Requires:	tetex-pgf >= 1.10
+Obsoletes:	tetex-latex-beamer-emacs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
